@@ -20,7 +20,7 @@ function getNewSelection(core: StandaloneEditorCore): DOMSelection | null {
     return range && core.contentDiv.contains(range.commonAncestorContainer)
         ? {
               type: 'range',
-              range: range,
+              range: range.cloneRange(),
           }
         : null;
 }
