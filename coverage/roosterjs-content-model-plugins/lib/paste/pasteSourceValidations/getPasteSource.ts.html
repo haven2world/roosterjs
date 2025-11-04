@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>16/16</span>
+                <span class='fraction'>18/18</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>16/16</span>
+                <span class='fraction'>18/18</span>
             </div>
         
             
@@ -134,13 +134,35 @@
 <a name='L75'></a><a href='#L75'>75</a>
 <a name='L76'></a><a href='#L76'>76</a>
 <a name='L77'></a><a href='#L77'>77</a>
-<a name='L78'></a><a href='#L78'>78</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -189,36 +211,46 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">57x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">19x</span>
-<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">75x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">25x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">19x</span>
-<span class="cline-any cline-yes">133x</span>
-<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">225x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">25x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { documentContainWacElements } from './documentContainWacElements';
 import { isExcelDesktopDocument } from './isExcelDesktopDocument';
+import { isExcelNotNativeEvent } from './isExcelNonNativeEvent';
 import { isExcelOnlineDocument } from './isExcelOnlineDocument';
 import { isGoogleSheetDocument } from './isGoogleSheetDocument';
+import { isOneNoteDesktopDocument } from './isOneNoteDocument';
 import { isPowerPointDesktopDocument } from './isPowerPointDesktopDocument';
 import { isWordDesktopDocument } from './isWordDesktopDocument';
 import { shouldConvertToSingleImage } from './shouldConvertToSingleImage';
-import type { BeforePasteEvent, ClipboardData } from 'roosterjs-content-model-types';
+import type {
+    BeforePasteEvent,
+    ClipboardData,
+    EditorEnvironment,
+} from 'roosterjs-content-model-types';
 &nbsp;
 /**
  * @internal
@@ -228,6 +260,7 @@ export type GetSourceInputParams = {
     fragment: DocumentFragment;
     shouldConvertSingleImage: boolean;
     clipboardData: ClipboardData;
+    environment: EditorEnvironment;
 };
 &nbsp;
 /**
@@ -242,7 +275,9 @@ export type KnownPasteSourceType =
     | 'googleSheets'
     | 'wacComponents'
     | 'default'
-    | 'singleImage';
+    | 'singleImage'
+    | 'excelNonNativeEvent'
+    | 'oneNoteDesktop';
 &nbsp;
 /**
  * @internal
@@ -257,6 +292,8 @@ const getSourceFunctions = new Map&lt;KnownPasteSourceType, GetSourceFunction&gt
     ['wacComponents', documentContainWacElements],
     ['googleSheets', isGoogleSheetDocument],
     ['singleImage', shouldConvertToSingleImage],
+    ['excelNonNativeEvent', isExcelNotNativeEvent],
+    ['oneNoteDesktop', isOneNoteDesktopDocument],
 ]);
 &nbsp;
 /**
@@ -268,7 +305,8 @@ const getSourceFunctions = new Map&lt;KnownPasteSourceType, GetSourceFunction&gt
  */
 export function getPasteSource(
     event: BeforePasteEvent,
-    shouldConvertSingleImage: boolean
+    shouldConvertSingleImage: boolean,
+    environment: EditorEnvironment
 ): KnownPasteSourceType {
     const { htmlAttributes, clipboardData, fragment } = event;
 &nbsp;
@@ -278,6 +316,7 @@ export function getPasteSource(
         fragment,
         shouldConvertSingleImage,
         clipboardData,
+        environment,
     };
 &nbsp;
     getSourceFunctions.forEach((func, key) =&gt; {
@@ -295,7 +334,7 @@ export function getPasteSource(
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Fri Oct 11 2024 08:01:53 GMT+0000 (Coordinated Universal Time)
+                at Tue Nov 04 2025 06:14:15 GMT+0000 (Coordinated Universal Time)
             </div>
         </div>
         <script src="../../../../prettify.js"></script>

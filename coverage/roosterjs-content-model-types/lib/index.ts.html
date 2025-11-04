@@ -537,7 +537,47 @@
 <a name='L478'></a><a href='#L478'>478</a>
 <a name='L479'></a><a href='#L479'>479</a>
 <a name='L480'></a><a href='#L480'>480</a>
-<a name='L481'></a><a href='#L481'>481</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L481'></a><a href='#L481'>481</a>
+<a name='L482'></a><a href='#L482'>482</a>
+<a name='L483'></a><a href='#L483'>483</a>
+<a name='L484'></a><a href='#L484'>484</a>
+<a name='L485'></a><a href='#L485'>485</a>
+<a name='L486'></a><a href='#L486'>486</a>
+<a name='L487'></a><a href='#L487'>487</a>
+<a name='L488'></a><a href='#L488'>488</a>
+<a name='L489'></a><a href='#L489'>489</a>
+<a name='L490'></a><a href='#L490'>490</a>
+<a name='L491'></a><a href='#L491'>491</a>
+<a name='L492'></a><a href='#L492'>492</a>
+<a name='L493'></a><a href='#L493'>493</a>
+<a name='L494'></a><a href='#L494'>494</a>
+<a name='L495'></a><a href='#L495'>495</a>
+<a name='L496'></a><a href='#L496'>496</a>
+<a name='L497'></a><a href='#L497'>497</a>
+<a name='L498'></a><a href='#L498'>498</a>
+<a name='L499'></a><a href='#L499'>499</a>
+<a name='L500'></a><a href='#L500'>500</a>
+<a name='L501'></a><a href='#L501'>501</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1042,6 +1082,7 @@ export { ContentModelImageFormat } from './contentModel/format/ContentModelImage
 export { ContentModelEntityFormat } from './contentModel/format/ContentModelEntityFormat';
 export { FormatHandlerTypeMap, FormatKey } from './contentModel/format/FormatHandlerTypeMap';
 &nbsp;
+export { AriaFormat } from './contentModel/format/formatParts/AriaFormat';
 export { BackgroundColorFormat } from './contentModel/format/formatParts/BackgroundColorFormat';
 export { BoldFormat } from './contentModel/format/formatParts/BoldFormat';
 export { FontFamilyFormat } from './contentModel/format/formatParts/FontFamilyFormat';
@@ -1075,6 +1116,9 @@ export { ListThreadFormat } from './contentModel/format/formatParts/ListThreadFo
 export { ListStyleFormat } from './contentModel/format/formatParts/ListStyleFormat';
 export { FloatFormat } from './contentModel/format/formatParts/FloatFormat';
 export { EntityInfoFormat } from './contentModel/format/formatParts/EntityInfoFormat';
+export { UndeletableFormat } from './contentModel/format/formatParts/UndeletableFormat';
+export { ImageStateFormat } from './contentModel/format/formatParts/ImageStateFormat';
+export { RoleFormat } from './contentModel/format/formatParts/RoleFormat';
 &nbsp;
 export { DatasetFormat, ReadonlyDatasetFormat } from './contentModel/format/metadata/DatasetFormat';
 export { TableMetadataFormat } from './contentModel/format/metadata/TableMetadataFormat';
@@ -1096,6 +1140,7 @@ export {
     EntityLifecycleOperation,
     EntityOperation,
     EntityRemovalOperation,
+    EntityFormatOperation,
 } from './enum/EntityOperation';
 export {
     TableOperation,
@@ -1317,6 +1362,7 @@ export {
     ModelToDomListContext,
     ModelToDomFormatContext,
 } from './context/ModelToDomFormatContext';
+export { RewriteFromModel, RewriteFromModelContext } from './context/RewriteFromModel';
 export {
     ContentModelHandler,
     ContentModelSegmentHandler,
@@ -1406,6 +1452,7 @@ export {
 } from './pluginState/PluginState';
 export { ContextMenuPluginState } from './pluginState/ContextMenuPluginState';
 &nbsp;
+export { AutoLinkOptions } from './parameter/AutoLinkOptions';
 export { EditorEnvironment, ContentModelSettings } from './parameter/EditorEnvironment';
 export {
     EntityState,
@@ -1441,7 +1488,11 @@ export { DOMEventHandlerFunction, DOMEventRecord } from './parameter/DOMEventRec
 export { EdgeLinkPreview } from './parameter/EdgeLinkPreview';
 export { ClipboardData } from './parameter/ClipboardData';
 export { AnnounceData, KnownAnnounceStrings } from './parameter/AnnounceData';
-export { TrustedHTMLHandler } from './parameter/TrustedHTMLHandler';
+export {
+    TrustedHTMLHandler,
+    DOMCreator,
+    LegacyTrustedHTMLHandler,
+} from './parameter/TrustedHTMLHandler';
 export { Rect } from './parameter/Rect';
 export { ValueSanitizer } from './parameter/ValueSanitizer';
 export { DOMHelper } from './parameter/DOMHelper';
@@ -1463,8 +1514,12 @@ export {
     ModelToTextCallbacks,
     ModelToTextChecker,
 } from './parameter/ModelToTextCallbacks';
+export { ConflictFormatSolution } from './parameter/ConflictFormatSolution';
+export { ParagraphMap, ParagraphIndexer } from './parameter/ParagraphMap';
+export { TextAndHtmlContentForCopy } from './parameter/TextAndHtmlContentForCopy';
 &nbsp;
 export { BasePluginEvent, BasePluginDomEvent } from './event/BasePluginEvent';
+export { BeforeAddUndoSnapshotEvent } from './event/BeforeAddUndoSnapshotEvent';
 export { BeforeCutCopyEvent } from './event/BeforeCutCopyEvent';
 export { BeforeDisposeEvent } from './event/BeforeDisposeEvent';
 export { BeforeKeyboardEditingEvent } from './event/BeforeKeyboardEditingEvent';
@@ -1472,9 +1527,10 @@ export { BeforePasteEvent, MergePastedContentFunc } from './event/BeforePasteEve
 export { BeforeSetContentEvent } from './event/BeforeSetContentEvent';
 export { ContentChangedEvent, ChangedEntity } from './event/ContentChangedEvent';
 export { ContextMenuEvent } from './event/ContextMenuEvent';
+export { RewriteFromModelEvent } from './event/RewriteFromModelEvent';
 export { EditImageEvent } from './event/EditImageEvent';
 export { EditorReadyEvent } from './event/EditorReadyEvent';
-export { EntityOperationEvent, Entity } from './event/EntityOperationEvent';
+export { EntityOperationEvent, FormattableRoot, Entity } from './event/EntityOperationEvent';
 export { ExtractContentWithDomEvent } from './event/ExtractContentWithDomEvent';
 export { EditorInputEvent } from './event/EditorInputEvent';
 export {
@@ -1483,8 +1539,11 @@ export {
     KeyUpEvent,
     CompositionEndEvent,
 } from './event/KeyboardEvent';
-export { LogicalRootChangedEvent } from './event/LogicalRootChangedEvent';
-export { MouseDownEvent, MouseUpEvent } from './event/MouseEvent';
+export {
+    BeforeLogicalRootChangeEvent,
+    LogicalRootChangedEvent,
+} from './event/LogicalRootChangedEvent';
+export { MouseDownEvent, MouseUpEvent, DoubleClickEvent } from './event/MouseEvent';
 export { PluginEvent } from './event/PluginEvent';
 export {
     PluginEventData,
@@ -1497,6 +1556,7 @@ export { ScrollEvent } from './event/ScrollEvent';
 export { SelectionChangedEvent } from './event/SelectionChangedEvent';
 export { EnterShadowEditEvent, LeaveShadowEditEvent } from './event/ShadowEditEvent';
 export { ZoomChangedEvent } from './event/ZoomChangedEvent';
+export { PointerDownEvent, PointerUpEvent } from './event/PointerEvent';
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -1504,7 +1564,7 @@ export { ZoomChangedEvent } from './event/ZoomChangedEvent';
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Fri Oct 11 2024 08:01:53 GMT+0000 (Coordinated Universal Time)
+                at Tue Nov 04 2025 06:14:15 GMT+0000 (Coordinated Universal Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>

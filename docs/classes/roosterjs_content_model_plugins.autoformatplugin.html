@@ -105,6 +105,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="roosterjs_content_model_plugins.autoformatplugin.html#getname" class="tsd-kind-icon">get<wbr>Name</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="roosterjs_content_model_plugins.autoformatplugin.html#initialize" class="tsd-kind-icon">initialize</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="roosterjs_content_model_plugins.autoformatplugin.html#onpluginevent" class="tsd-kind-icon">on<wbr>Plugin<wbr>Event</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="roosterjs_content_model_plugins.autoformatplugin.html#willhandleeventexclusively" class="tsd-kind-icon">will<wbr>Handle<wbr>Event<wbr>Exclusively</a></li>
 							</ul>
 						</section>
 					</div>
@@ -122,7 +123,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/haven2world/roosterjs/blob/10ee478/packages/roosterjs-content-model-plugins/lib/autoFormat/AutoFormatPlugin.ts#L39">roosterjs-content-model-plugins/lib/autoFormat/AutoFormatPlugin.ts:39</a></li>
+									<li>Defined in <a href="https://github.com/haven2world/roosterjs/blob/e8c9251/packages/roosterjs-content-model-plugins/lib/autoFormat/AutoFormatPlugin.ts#L61">roosterjs-content-model-plugins/lib/autoFormat/AutoFormatPlugin.ts:61</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -134,6 +135,7 @@
 										<ul>
 											<li>autoBullet: A boolean that enables or disables automatic bullet list formatting. Defaults to false.</li>
 											<li>autoNumbering: A boolean that enables or disables automatic numbering formatting. Defaults to false.</li>
+											<li>removeListMargins: A boolean to remove list margins when it is automatically triggered. Defaults to false.</li>
 											<li>autoHyphen: A boolean that enables or disables automatic hyphen transformation. Defaults to false.</li>
 											<li>autoFraction: A boolean that enables or disables automatic fraction transformation. Defaults to false.</li>
 											<li>autoOrdinals: A boolean that enables or disables automatic ordinal number transformation. Defaults to false.</li>
@@ -141,6 +143,7 @@
 											<li>autoUnlink: A boolean that enables or disables automatic hyperlink removal when pressing backspace. Defaults to false.</li>
 											<li>autoTel: A boolean that enables or disables automatic hyperlink telephone numbers transformation. Defaults to false.</li>
 											<li>autoMailto: A boolean that enables or disables automatic hyperlink email address transformation. Defaults to false.</li>
+											<li>autoHorizontalLine: A boolean that enables or disables automatic horizontal line creation. Defaults to false.</li>
 										</ul>
 									</div>
 								</li>
@@ -163,7 +166,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of EditorPlugin.dispose</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/haven2world/roosterjs/blob/10ee478/packages/roosterjs-content-model-plugins/lib/autoFormat/AutoFormatPlugin.ts#L76">roosterjs-content-model-plugins/lib/autoFormat/AutoFormatPlugin.ts:76</a></li>
+									<li>Defined in <a href="https://github.com/haven2world/roosterjs/blob/e8c9251/packages/roosterjs-content-model-plugins/lib/autoFormat/AutoFormatPlugin.ts#L100">roosterjs-content-model-plugins/lib/autoFormat/AutoFormatPlugin.ts:100</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -188,7 +191,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of EditorPlugin.getName</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/haven2world/roosterjs/blob/10ee478/packages/roosterjs-content-model-plugins/lib/autoFormat/AutoFormatPlugin.ts#L57">roosterjs-content-model-plugins/lib/autoFormat/AutoFormatPlugin.ts:57</a></li>
+									<li>Defined in <a href="https://github.com/haven2world/roosterjs/blob/e8c9251/packages/roosterjs-content-model-plugins/lib/autoFormat/AutoFormatPlugin.ts#L81">roosterjs-content-model-plugins/lib/autoFormat/AutoFormatPlugin.ts:81</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -211,7 +214,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of EditorPlugin.initialize</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/haven2world/roosterjs/blob/10ee478/packages/roosterjs-content-model-plugins/lib/autoFormat/AutoFormatPlugin.ts#L67">roosterjs-content-model-plugins/lib/autoFormat/AutoFormatPlugin.ts:67</a></li>
+									<li>Defined in <a href="https://github.com/haven2world/roosterjs/blob/e8c9251/packages/roosterjs-content-model-plugins/lib/autoFormat/AutoFormatPlugin.ts#L91">roosterjs-content-model-plugins/lib/autoFormat/AutoFormatPlugin.ts:91</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -245,7 +248,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of EditorPlugin.onPluginEvent</p>
 								<ul>
-									<li>Defined in <a href="https://github.com/haven2world/roosterjs/blob/10ee478/packages/roosterjs-content-model-plugins/lib/autoFormat/AutoFormatPlugin.ts#L86">roosterjs-content-model-plugins/lib/autoFormat/AutoFormatPlugin.ts:86</a></li>
+									<li>Defined in <a href="https://github.com/haven2world/roosterjs/blob/e8c9251/packages/roosterjs-content-model-plugins/lib/autoFormat/AutoFormatPlugin.ts#L146">roosterjs-content-model-plugins/lib/autoFormat/AutoFormatPlugin.ts:146</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -265,6 +268,30 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="willhandleeventexclusively" class="tsd-anchor"></a>
+					<h3>will<wbr>Handle<wbr>Event<wbr>Exclusively</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">will<wbr>Handle<wbr>Event<wbr>Exclusively<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><a href="../modules/roosterjs_content_model_types.html#pluginevent" class="tsd-signature-type" data-tsd-kind="Type alias">PluginEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of EditorPlugin.willHandleEventExclusively</p>
+								<ul>
+									<li>Defined in <a href="https://github.com/haven2world/roosterjs/blob/e8c9251/packages/roosterjs-content-model-plugins/lib/autoFormat/AutoFormatPlugin.ts#L130">roosterjs-content-model-plugins/lib/autoFormat/AutoFormatPlugin.ts:130</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>event: <a href="../modules/roosterjs_content_model_types.html#pluginevent" class="tsd-signature-type" data-tsd-kind="Type alias">PluginEvent</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -290,6 +317,9 @@
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/roosterjs_content_model_dom.html">roosterjs-<wbr>content-<wbr>model-<wbr>dom</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/roosterjs_content_model_markdown.html">roosterjs-<wbr>content-<wbr>model-<wbr>markdown</a>
 					</li>
 					<li class="current tsd-kind-module">
 						<a href="../modules/roosterjs_content_model_plugins.html">roosterjs-<wbr>content-<wbr>model-<wbr>plugins</a>
@@ -326,6 +356,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="roosterjs_content_model_plugins.autoformatplugin.html#onpluginevent" class="tsd-kind-icon">on<wbr>Plugin<wbr>Event</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="roosterjs_content_model_plugins.autoformatplugin.html#willhandleeventexclusively" class="tsd-kind-icon">will<wbr>Handle<wbr>Event<wbr>Exclusively</a>
 							</li>
 						</ul>
 					</li>
